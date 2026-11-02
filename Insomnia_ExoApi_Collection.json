@@ -1,0 +1,115 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2026-11-02T11:30:00.000Z",
+  "__export_source": "insomnia.desktop.app:v2023.5.8",
+  "resources": [
+    {
+      "_id": "wrk_exoapi_ativ5",
+      "parentId": null,
+      "modified": 1730547000000,
+      "created": 1730547000000,
+      "name": "ExoApi - Atividade 5 (CRUD Usuários)",
+      "description": "Coleção de testes do CRUD completo de Usuários da Exo.WebApi no Insomnia",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "env_exoapi_usuarios_base",
+      "parentId": "wrk_exoapi_ativ5",
+      "modified": 1730547000000,
+      "created": 1730547000000,
+      "name": "Base Environment",
+      "data": {
+        "base_url": "https://localhost:7154/api/usuarios"
+      },
+      "_type": "environment"
+    },
+    {
+      "_id": "req_listar_usuarios",
+      "parentId": "wrk_exoapi_ativ5",
+      "modified": 1730547000000,
+      "created": 1730547000000,
+      "url": "https://localhost:7154/api/usuarios/",
+      "name": "1. Listar Usuários (GET)",
+      "description": "Lista todos os usuários cadastrados no banco de dados ExoApi (Retorno esperado: 200 OK).",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "_type": "request"
+    },
+    {
+      "_id": "req_cadastrar_usuario",
+      "parentId": "wrk_exoapi_ativ5",
+      "modified": 1730547000000,
+      "created": 1730547000000,
+      "url": "https://localhost:7154/api/usuarios/",
+      "name": "2. Cadastrar Usuário (POST)",
+      "description": "Cadastra um novo usuário (email_tres@sp.br) no banco de dados (Retorno esperado: 201 Created).",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"email\": \"email_tres@sp.br\",\n\t\"senha\": \"1234\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "_type": "request"
+    },
+    {
+      "_id": "req_buscar_usuario_por_id",
+      "parentId": "wrk_exoapi_ativ5",
+      "modified": 1730547000000,
+      "created": 1730547000000,
+      "url": "https://localhost:7154/api/usuarios/3",
+      "name": "3. Buscar Usuário por ID (GET {id})",
+      "description": "Consulta individualmente o usuário pelo ID 3 (Retorno esperado: 200 OK ou 404 NotFound).",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "_type": "request"
+    },
+    {
+      "_id": "req_atualizar_usuario",
+      "parentId": "wrk_exoapi_ativ5",
+      "modified": 1730547000000,
+      "created": 1730547000000,
+      "url": "https://localhost:7154/api/usuarios/3",
+      "name": "4. Atualizar Usuário (PUT {id})",
+      "description": "Atualiza os dados do usuário de ID 3 para email_quatro@sp.br e senha 4321 (Retorno esperado: 204 No Content).",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"email\": \"email_quatro@sp.br\",\n\t\"senha\": \"4321\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "_type": "request"
+    },
+    {
+      "_id": "req_deletar_usuario",
+      "parentId": "wrk_exoapi_ativ5",
+      "modified": 1730547000000,
+      "created": 1730547000000,
+      "url": "https://localhost:7154/api/usuarios/3",
+      "name": "5. Deletar Usuário (DELETE {id})",
+      "description": "Remove o usuário de ID 3 do banco de dados (Retorno esperado: 204 No Content).",
+      "method": "DELETE",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "_type": "request"
+    }
+  ]
+}
